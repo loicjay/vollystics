@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Vollystics</string>
+    <string name="live_games_button">Live Games</string>
+    <string name="stats_button">Statistics</string>
+    <string name="team_button">Team</string>
+    <string name="team_title">Team</string>
+    <string name="team_name_label">Name</string>
+    <string name="team_players_label">Players</string>
+    <string name="no_player">There is no player in the team</string>
+</resources>
