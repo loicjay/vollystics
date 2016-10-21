@@ -21,6 +21,10 @@
             android:name=".TeamActivity"
             android:label="@string/team_title"
             android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".PlayerActivity"
+            android:label="@string/player_title"
+            android:parentActivityName=".TeamActivity" />
     </application>
 
 </manifest>

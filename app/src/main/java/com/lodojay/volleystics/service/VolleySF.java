@@ -13,6 +13,8 @@ import java.util.List;
  */
 
 public class VolleySF {
+    private static final String TAG = "VolleySF";
+
     private final VolleyDAO dao;
 
     public VolleySF(Context context) {

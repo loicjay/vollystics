@@ -2,6 +2,7 @@ package com.lodojay.volleystics.dao;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.util.Log;
 
 import com.lodojay.volleystics.model.Team;
 import static com.lodojay.volleystics.dao.Repo.TEAM.TABLE;
@@ -12,6 +13,9 @@ import static com.lodojay.volleystics.dao.Repo.TEAM.NAME;
  * Created by ljay on 15/10/2016.
  */
 public class TeamDAO {
+
+    private static final String TAG = "TeamDAO";
+
     private Repo repo;
 
     public TeamDAO(Repo repo) {
@@ -33,8 +37,11 @@ public class TeamDAO {
     public Team latest() {
         Cursor r = repo.ro().rawQuery("SELECT id,name FROM team", new String[0]);
 
-        if (r.moveToFirst())
-            return Team.Builder.restore(r.getLong(0), r.getString(1)).build();
+        if (r.moveToFirst()) {
+            Long id = r.getLong(0);
+            String name = r.getString(1);
+            return Team.Builder.restore(id, name).build();
+        }
 
         return null;
     }

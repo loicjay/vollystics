@@ -39,7 +39,7 @@ public class Team {
             return new Builder(-1, name);
         }
         public static Builder restore(long id,String name) {
-            return new Builder(-1, name);
+            return new Builder(id, name);
         }
 
         public Team build() {
